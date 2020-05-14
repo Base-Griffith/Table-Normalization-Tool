@@ -135,7 +135,7 @@ public class Decomp {
 
                 FK.addFD(fd);
                 System.out.println(" \n\n ==> The candidate keys are: " + FK.getCandidateKeys() + "\n\n");
-
+                C_KEY = C_KEY + FK.getCandidateKeys();
                 Vector<String> ckey = new Vector<String>();
                 for(String i : FK.getCandidateKeys())
                 {
@@ -291,11 +291,13 @@ public class Decomp {
             }
             System.out.println("Decomposition:");
             System.out.println(duplicate_attr);
+            dec = dec +  duplicate_attr;
 
             for(int i=0;i<ckey.size();i++){
                 if(duplicate_attr.contains(ckey.get(i))==true){
-                    C_KEY = C_KEY + ckey.get(i);
+                    //C_KEY = C_KEY + ckey.get(i);
                     System.out.println("Key: "+ckey.get(i));
+                    dec = dec + "\nKey: " + ckey.get(i) + "\n\n";
                     break;
                 }
             }
