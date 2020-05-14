@@ -291,13 +291,18 @@ public class Decomp {
             }
             System.out.println("Decomposition:");
             System.out.println(duplicate_attr);
-            dec = dec +  duplicate_attr;
+            dec = dec + " (" + duplicate_attr + ")\n";
 
             for(int i=0;i<ckey.size();i++){
                 if(duplicate_attr.contains(ckey.get(i))==true){
                     //C_KEY = C_KEY + ckey.get(i);
                     System.out.println("Key: "+ckey.get(i));
-                    dec = dec + "\nKey: " + ckey.get(i) + "\n\n";
+                    if(ckey.get(i).equals("") == false){
+                        dec = dec + " Key: " + ckey.get(i) + "\n\n";
+                    }
+                    else{
+                        dec = dec + duplicate_attr + "\n\n";
+                    }
                     break;
                 }
             }
@@ -305,13 +310,13 @@ public class Decomp {
 
             for(int i=0;i<Decomposition.size();i++){
                // System.out.println(Decomposition.get(i));
-                dec = dec + Decomposition.get(i) + "\n";
+                dec = dec + " (" + Decomposition.get(i)+")" + "\n";
                 //System.out.println("Key : "+Keys.get(i));
                 if(Keys.get(i).equals("")){
-                    dec = dec + Decomposition.get(i) + "\n\n";
+                    dec = dec + " " + Decomposition.get(i) + "\n\n";
                 }
                 else{    
-                    dec = dec + "Key: " + Keys.get(i) + "\n\n";
+                    dec = dec + " Key: " + Keys.get(i) + "\n\n";
                 }
             }
         }
