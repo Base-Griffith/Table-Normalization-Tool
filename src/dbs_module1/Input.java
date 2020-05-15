@@ -6,6 +6,7 @@
 package dbs_module1;
 import java.util.*;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 /**
  *
  * @author StylishDheeru
@@ -260,6 +261,10 @@ public class Input extends javax.swing.JFrame {
 
     private void run_jbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_run_jbtnActionPerformed
         // TODO add your handling code here:
+        if(total_jtxtfld.getText().equals("") || inp_jtxtfld.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane,"ERROR! Provide adequate input");
+        }
+        else{
         ansarea.setText("");
         outckey.setText("");
         Decomp.dec = "";
@@ -290,6 +295,7 @@ public class Input extends javax.swing.JFrame {
         outckey.setText(Decomp.C_KEY);
        // System.out.println(Decomp.dec);
         ansarea.setText(Decomp.dec);
+        }
         
         
 //        try{
