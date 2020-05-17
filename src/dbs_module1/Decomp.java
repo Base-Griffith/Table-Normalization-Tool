@@ -22,7 +22,33 @@ public class Decomp {
 			visited[i] = 0;
 		}
     }
-    
+    static int alpha_check(String s1,String s2){
+		int visited[] = new int[26];
+		for(int i=0;i<26;i++){
+			visited[i] = 0;
+		}
+
+		int n1 = s1.length();
+		int n2 = s2.length();
+
+		for(int i=0;i<n1;i++){
+			char ch = s1.charAt(i);
+			visited[ch-'a'] = 1;
+		}
+		int check_flag = 0;
+		for(int i=0;i<n2;i++){
+			char ch = s2.charAt(i);
+			if(visited[ch-'a']==0){
+				check_flag = 1;
+				break;
+			}
+		}
+
+		if(check_flag==1){
+			return 0;
+		}
+		return 1;
+	}
     
     
     public static void f(String prefix, String chars, ArrayList<String> result) 
@@ -289,16 +315,18 @@ public class Decomp {
                     Keys.add(lt_temp);
                 }
             }
+            int r = 1;
+
             System.out.println("Decomposition:");
             System.out.println(duplicate_attr);
-            dec = dec + " (" + duplicate_attr + ")\n";
+            dec = dec + "R"+ r++ +": (" + duplicate_attr + ")\n";
 
             for(int i=0;i<ckey.size();i++){
-                if(duplicate_attr.contains(ckey.get(i))==true){
+                if(alpha_check(duplicate_attr,ckey.get(i)) == 1){
                     //C_KEY = C_KEY + ckey.get(i);
                     System.out.println("Key: "+ckey.get(i));
                     if(ckey.get(i).equals("") == false){
-                        dec = dec + " Key: " + ckey.get(i) + "\n\n";
+                        dec = dec + "Key: " + ckey.get(i) + "\n\n";
                     }
                     else{
                         dec = dec + duplicate_attr + "\n\n";
@@ -307,16 +335,15 @@ public class Decomp {
                 }
             }
 
-
             for(int i=0;i<Decomposition.size();i++){
                // System.out.println(Decomposition.get(i));
-                dec = dec + " (" + Decomposition.get(i)+")" + "\n";
+                dec = dec + "R" + r++ +": (" + Decomposition.get(i)+")" + "\n";
                 //System.out.println("Key : "+Keys.get(i));
                 if(Keys.get(i).equals("")){
-                    dec = dec + " " + Decomposition.get(i) + "\n\n";
+                    dec = dec  + Decomposition.get(i) + "\n\n";
                 }
                 else{    
-                    dec = dec + " Key: " + Keys.get(i) + "\n\n";
+                    dec = dec + "Key: " + Keys.get(i) + "\n\n";
                 }
             }
         }

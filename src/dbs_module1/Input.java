@@ -7,6 +7,7 @@ package dbs_module1;
 import java.util.*;
 import java.awt.Color;
 import javax.swing.JOptionPane;
+import java.lang.*;
 /**
  *
  * @author StylishDheeru
@@ -61,24 +62,25 @@ public class Input extends javax.swing.JFrame {
 
         panel.setBackground(new java.awt.Color(51, 51, 51));
 
-        jLabel1.setFont(new java.awt.Font("Footlight MT Light", 0, 16)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("All Attributes");
 
-        total_jtxtfld.setFont(new java.awt.Font("Corbel", 0, 12)); // NOI18N
+        total_jtxtfld.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         total_jtxtfld.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 total_jtxtfldActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Footlight MT Light", 0, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Functional Dependencies");
 
-        inp_jtxtfld.setFont(new java.awt.Font("Corbel", 0, 12)); // NOI18N
+        inp_jtxtfld.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        run_jbtn.setFont(new java.awt.Font("Footlight MT Light", 0, 12)); // NOI18N
+        run_jbtn.setBackground(new java.awt.Color(255, 102, 0));
+        run_jbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         run_jbtn.setText("Run");
         run_jbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +88,8 @@ public class Input extends javax.swing.JFrame {
             }
         });
 
-        clear.setFont(new java.awt.Font("Footlight MT Light", 0, 12)); // NOI18N
+        clear.setBackground(new java.awt.Color(255, 102, 0));
+        clear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         clear.setText("Clear");
         clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,11 +97,11 @@ public class Input extends javax.swing.JFrame {
             }
         });
 
-        ckeylbl.setFont(new java.awt.Font("Footlight MT Light", 0, 16)); // NOI18N
+        ckeylbl.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         ckeylbl.setForeground(new java.awt.Color(255, 255, 255));
         ckeylbl.setText("Ckey");
 
-        nflbl.setFont(new java.awt.Font("Footlight MT Light", 0, 16)); // NOI18N
+        nflbl.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         nflbl.setForeground(new java.awt.Color(255, 255, 255));
         nflbl.setText("Normal Form");
 
@@ -122,14 +125,15 @@ public class Input extends javax.swing.JFrame {
         ansarea.setBorder(null);
         jScrollPane1.setViewportView(ansarea);
 
-        declbl.setFont(new java.awt.Font("Footlight MT Light", 0, 16)); // NOI18N
+        declbl.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         declbl.setForeground(new java.awt.Color(255, 255, 255));
         declbl.setText("Decomposed Relations");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Table Normalization Tool");
 
+        jScrollPane2.setBackground(new java.awt.Color(255, 153, 0));
         jScrollPane2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -137,16 +141,19 @@ public class Input extends javax.swing.JFrame {
         jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(51, 51, 51));
         jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea1.setRows(5);
         jTextArea1.setText("  \n  Attributes are ',' seperated\n\n  Attributes in FDs need no delimter \n \n  All FDs are seperated by ','      \n");
         jScrollPane2.setViewportView(jTextArea1);
 
-        jSeparator1.setBackground(new java.awt.Color(153, 153, 153));
+        jSeparator1.setBackground(new java.awt.Color(255, 153, 0));
+        jSeparator1.setForeground(new java.awt.Color(255, 102, 0));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator1.setPreferredSize(new java.awt.Dimension(5, 0));
 
-        jSeparator2.setBackground(new java.awt.Color(153, 153, 153));
+        jSeparator2.setBackground(new java.awt.Color(255, 153, 0));
+        jSeparator2.setForeground(new java.awt.Color(255, 102, 51));
 
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
         panel.setLayout(panelLayout);
@@ -156,30 +163,35 @@ public class Input extends javax.swing.JFrame {
                 .addGap(75, 75, 75)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelLayout.createSequentialGroup()
-                        .addComponent(run_jbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(62, 62, 62)
-                        .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelLayout.createSequentialGroup()
                         .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(39, 39, 39)
+                            .addComponent(jLabel2))
+                        .addGap(34, 34, 34)
                         .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(inp_jtxtfld)
-                            .addComponent(total_jtxtfld, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                            .addComponent(inp_jtxtfld, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                            .addComponent(total_jtxtfld)))
+                    .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelLayout.createSequentialGroup()
+                            .addComponent(run_jbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(44, 44, 44)
+                            .addComponent(clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ckeylbl, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nflbl)
                     .addComponent(declbl))
-                .addGap(47, 47, 47)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(outnf, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(outckey, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(outnf, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(outckey, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(42, 42, 42))
             .addComponent(jSeparator2)
             .addGroup(panelLayout.createSequentialGroup()
@@ -196,7 +208,7 @@ public class Input extends javax.swing.JFrame {
                 .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 10, Short.MAX_VALUE)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                         .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(total_jtxtfld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -206,20 +218,20 @@ public class Input extends javax.swing.JFrame {
                             .addComponent(inp_jtxtfld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(46, 46, 46)
                         .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(run_jbtn)
-                            .addComponent(clear))
+                            .addComponent(run_jbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(105, 105, 105)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(206, 206, 206))
                     .addGroup(panelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator1))
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panelLayout.createSequentialGroup()
                         .addGap(64, 64, 64)
-                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(panelLayout.createSequentialGroup()
                                 .addComponent(outckey, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(outnf, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelLayout.createSequentialGroup()
                                 .addComponent(ckeylbl, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -231,8 +243,8 @@ public class Input extends javax.swing.JFrame {
                                 .addComponent(declbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelLayout.createSequentialGroup()
                                 .addGap(56, 56, 56)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap())))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(54, Short.MAX_VALUE))))
         );
 
         panelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel1, jLabel2});
@@ -261,48 +273,80 @@ public class Input extends javax.swing.JFrame {
 
     private void run_jbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_run_jbtnActionPerformed
         // TODO add your handling code here:
-        if(total_jtxtfld.getText().equals("") || inp_jtxtfld.getText().equals("")){
+        if(total_jtxtfld.getText().equals("")){
             JOptionPane.showMessageDialog(rootPane,"ERROR! Provide adequate input");
         }
+        else if(inp_jtxtfld.getText().equals("") && total_jtxtfld.getText().equals("") == false){
+            outckey.setText("["+ total_jtxtfld.getText()+"]");
+            outnf.setText("BCNF");
+        }
         else{
-        ansarea.setText("");
-        outckey.setText("");
-        Decomp.dec = "";
-        Decomp.C_KEY = "";
-        String total = total_jtxtfld.getText();       
-        total_jtxtfld.setText("");
-      
-        Decomp d = new Decomp();
-        d.total_array = total.split(",");
-        String inp = inp_jtxtfld.getText();
-    
-        inp_jtxtfld.setText("");
-        Decomp.attributes = total;
-        Decomp.fd = inp;
-        
+            ansarea.setText("");
+            outckey.setText("");
+            Decomp.dec = "";
+            Decomp.C_KEY = "";
+            String total = total_jtxtfld.getText(); 
+           
+            total_jtxtfld.setText("");
+            int[] visited_att = new int[26];
+            for(int i=0;i<total.length();i++){
+                if(total.charAt(i) != ','){        
+                    visited_att[total.charAt(i)-'a'] = 1;
+                }
+            }
+            Decomp d = new Decomp();
+            d.total_array = total.split(",");
+            String inp = inp_jtxtfld.getText();
+            StringTokenizer one = new StringTokenizer(inp,",");
+            while(one.hasMoreTokens()){
+                String temp2 = one.nextToken();
+                int[] fd_visited = new int[26];
+                for(int i=0;i<temp2.length();i++){
+                    if(temp2.charAt(i) != '-' && temp2.charAt(i) != '>'){    
+                        fd_visited[temp2.charAt(i)-'a']++;
+                        if(fd_visited[temp2.charAt(i)-'a'] > 1){
+                            JOptionPane.showMessageDialog(rootPane, "Remove attribute redundancy in Functional Dependencies");
+                            inp_jtxtfld.setText("");
+                            return;
+                        }
+                    }
+                }
+                StringTokenizer two = new StringTokenizer(temp2,"->");
+                while(two.hasMoreTokens()){
+                    String temp = two.nextToken();  
+                    for(int i=0;i<temp.length();i++){
+                        if(visited_att[temp.charAt(i)-'a'] == 0){
+                           JOptionPane.showMessageDialog(rootPane, "Unidentified attribute found in a FD");
+                           inp_jtxtfld.setText("");
+                           return;
+                        }
+                        
+                    }
+                }
+            }
+            inp_jtxtfld.setText("");
+            Decomp.attributes = total;
+            Decomp.fd = inp;
 
 
-        Decomp.deco(d.left,d.right,d.total_array);
-        
-        //ansarea.setVisible(true);
-        ckeylbl.setForeground(new Color(255,255,255));
-        if(!Decomp.dec.equals("")) {
-            declbl.setForeground(new Color(255,255,255));
-        } 
-        nflbl.setForeground(new Color(255,255,255));
-        ansarea.setForeground(new Color(255,255,255));
-        outnf.setText(Decomp.Norm);
-        outckey.setText(Decomp.C_KEY);
-       // System.out.println(Decomp.dec);
-        ansarea.setText(Decomp.dec);
+
+            Decomp.deco(d.left,d.right,d.total_array);
+
+            //ansarea.setVisible(true);
+            ckeylbl.setForeground(new Color(255,255,255));
+            if(!Decomp.dec.equals("")) {
+                declbl.setForeground(new Color(255,255,255));
+            } 
+            nflbl.setForeground(new Color(255,255,255));
+            ansarea.setForeground(new Color(255,255,255));
+            outnf.setText(Decomp.Norm);
+            outckey.setText(Decomp.C_KEY);
+           // System.out.println(Decomp.dec);
+            ansarea.setText(Decomp.dec);
         }
         
         
-//        try{
-//            Decomp.deco();
-//        }   catch(Exception e){
-//            System.out.println("error in calling deco method");     
-//        }
+
     }//GEN-LAST:event_run_jbtnActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
