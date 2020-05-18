@@ -23,6 +23,7 @@ public class Input extends javax.swing.JFrame {
         nflbl.setForeground(new Color(51,51,51));
         declbl.setForeground(new Color(51,51,51));
         ansarea.setBackground(new Color(51,51,51));
+        
         //ansarea.setVisible(false);
            
     }
@@ -57,10 +58,13 @@ public class Input extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Table Normalization Tool");
         setBackground(new java.awt.Color(51, 51, 51));
         setForeground(java.awt.Color.darkGray);
+        setResizable(false);
 
         panel.setBackground(new java.awt.Color(51, 51, 51));
+        panel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -72,12 +76,22 @@ public class Input extends javax.swing.JFrame {
                 total_jtxtfldActionPerformed(evt);
             }
         });
+        total_jtxtfld.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                total_jtxtfldKeyTyped(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Functional Dependencies");
 
         inp_jtxtfld.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        inp_jtxtfld.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                inp_jtxtfldKeyTyped(evt);
+            }
+        });
 
         run_jbtn.setBackground(new java.awt.Color(255, 255, 0));
         run_jbtn.setFont(new java.awt.Font("Footlight MT Light", 1, 14)); // NOI18N
@@ -190,9 +204,10 @@ public class Input extends javax.swing.JFrame {
                         .addComponent(nflbl)))
                 .addGap(29, 29, 29)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(outnf, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(outckey, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(outnf, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
+                        .addComponent(outckey, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(31, 31, 31))
             .addComponent(jSeparator2)
             .addGroup(panelLayout.createSequentialGroup()
@@ -253,13 +268,13 @@ public class Input extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -407,6 +422,25 @@ public class Input extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_clearActionPerformed
+
+    private void total_jtxtfldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_total_jtxtfldKeyTyped
+        // TODO add your handling code here:
+        char c =evt.getKeyChar();
+        int s = c;
+        if(!((s>= 97 && s<=122) || c == ',')){
+            evt.consume();
+        }
+        
+    }//GEN-LAST:event_total_jtxtfldKeyTyped
+
+    private void inp_jtxtfldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_inp_jtxtfldKeyTyped
+        // TODO add your handling code here:
+        char c =evt.getKeyChar();
+        int s = c;
+        if(!((s>= 97 && s<=122) || c == '-' || c == '>' || c == ',')){
+            evt.consume();
+        }
+    }//GEN-LAST:event_inp_jtxtfldKeyTyped
 
     /**
      * @param args the command line arguments
