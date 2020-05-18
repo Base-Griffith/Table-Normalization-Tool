@@ -298,6 +298,9 @@ public class Decomp {
 
 
         /////////////////////////////////////////////////////Decomposition into x+1////////////////////////////////////////////////////////////////
+        if(normal_form == 4){
+            dec = dec + "Already in Highest Normal Form";
+        }    
         if(normal_form<4){
             String duplicate_attr  = new String();                 // duplicate string containing all attributes.
             duplicate_attr = total_attributes;

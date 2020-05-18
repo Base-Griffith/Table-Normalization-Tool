@@ -79,8 +79,8 @@ public class Input extends javax.swing.JFrame {
 
         inp_jtxtfld.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        run_jbtn.setBackground(new java.awt.Color(255, 102, 0));
-        run_jbtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        run_jbtn.setBackground(new java.awt.Color(255, 255, 0));
+        run_jbtn.setFont(new java.awt.Font("Footlight MT Light", 1, 14)); // NOI18N
         run_jbtn.setText("Run");
         run_jbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,8 +88,8 @@ public class Input extends javax.swing.JFrame {
             }
         });
 
-        clear.setBackground(new java.awt.Color(255, 102, 0));
-        clear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        clear.setBackground(new java.awt.Color(255, 255, 0));
+        clear.setFont(new java.awt.Font("Footlight MT Light", 1, 14)); // NOI18N
         clear.setText("Clear");
         clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +112,7 @@ public class Input extends javax.swing.JFrame {
         outnf.setForeground(new java.awt.Color(255, 255, 255));
 
         jScrollPane1.setBackground(new java.awt.Color(51, 51, 51));
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         ansarea.setEditable(false);
         ansarea.setBackground(new java.awt.Color(51, 51, 51));
@@ -130,29 +130,27 @@ public class Input extends javax.swing.JFrame {
         declbl.setText("Decomposed Relations");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 0));
         jLabel3.setText("Table Normalization Tool");
 
         jScrollPane2.setBackground(new java.awt.Color(255, 153, 0));
-        jScrollPane2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jScrollPane2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 0), 2));
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(51, 51, 51));
         jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea1.setFont(new java.awt.Font("3ds", 0, 14)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(255, 255, 0));
         jTextArea1.setRows(5);
-        jTextArea1.setText("  \n  Attributes are ',' seperated\n\n  Attributes in FDs need no delimter \n \n  All FDs are seperated by ','      \n");
+        jTextArea1.setText("  \n  Attributes are ',' separated\n\n  Attributes in FDs need no delimiter \n \n  All FDs are separated by ','      \n");
         jScrollPane2.setViewportView(jTextArea1);
 
-        jSeparator1.setBackground(new java.awt.Color(255, 153, 0));
         jSeparator1.setForeground(new java.awt.Color(255, 102, 0));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator1.setPreferredSize(new java.awt.Dimension(5, 0));
 
-        jSeparator2.setBackground(new java.awt.Color(255, 153, 0));
         jSeparator2.setForeground(new java.awt.Color(255, 102, 51));
 
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
@@ -178,21 +176,24 @@ public class Input extends javax.swing.JFrame {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ckeylbl, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nflbl)
-                    .addComponent(declbl))
+                    .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelLayout.createSequentialGroup()
+                            .addGap(36, 36, 36)
+                            .addComponent(ckeylbl, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(116, 116, 116))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(declbl)))
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(nflbl)))
+                .addGap(29, 29, 29)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(outnf, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(outckey, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(42, 42, 42))
+                    .addComponent(outnf, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(outckey, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31))
             .addComponent(jSeparator2)
             .addGroup(panelLayout.createSequentialGroup()
                 .addGap(373, 373, 373)
@@ -221,30 +222,28 @@ public class Input extends javax.swing.JFrame {
                             .addComponent(run_jbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(105, 105, 105)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(206, 206, 206))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(200, 200, 200))
                     .addGroup(panelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panelLayout.createSequentialGroup()
                         .addGap(64, 64, 64)
-                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(panelLayout.createSequentialGroup()
-                                .addComponent(outckey, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(outnf, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelLayout.createSequentialGroup()
-                                .addComponent(ckeylbl, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(nflbl)))
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ckeylbl, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(outckey, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelLayout.createSequentialGroup()
-                                .addGap(107, 107, 107)
-                                .addComponent(declbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(23, 23, 23)
+                                .addComponent(outnf, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelLayout.createSequentialGroup()
-                                .addGap(56, 56, 56)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(54, Short.MAX_VALUE))))
+                                .addGap(18, 18, 18)
+                                .addComponent(nflbl)))
+                        .addGap(50, 50, 50)
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(declbl, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())))
         );
 
         panelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel1, jLabel2});
@@ -275,10 +274,23 @@ public class Input extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(total_jtxtfld.getText().equals("")){
             JOptionPane.showMessageDialog(rootPane,"ERROR! Provide adequate input");
+            Decomp.dec = "";
+                            Decomp.C_KEY = "";
+                            //total_jtxtfld.setText("");
+                            ckeylbl.setForeground(new Color(51,51,51));
+                            nflbl.setForeground(new Color(51,51,51));
+                            declbl.setForeground(new Color(51,51,51));
+                            ansarea.setBackground(new Color(51,51,51));
+                            ansarea.setText("");
+                            outckey.setText("");
+                            ansarea.setText("");
+                            //ansarea.setVisible(false);
+                            outnf.setText("");
         }
         else if(inp_jtxtfld.getText().equals("") && total_jtxtfld.getText().equals("") == false){
             outckey.setText("["+ total_jtxtfld.getText()+"]");
             outnf.setText("BCNF");
+            ansarea.setText("Already in Highest Normal Form");
         }
         else{
             ansarea.setText("");
@@ -287,7 +299,7 @@ public class Input extends javax.swing.JFrame {
             Decomp.C_KEY = "";
             String total = total_jtxtfld.getText(); 
            
-            total_jtxtfld.setText("");
+            //total_jtxtfld.setText("");
             int[] visited_att = new int[26];
             for(int i=0;i<total.length();i++){
                 if(total.charAt(i) != ','){        
@@ -305,8 +317,21 @@ public class Input extends javax.swing.JFrame {
                     if(temp2.charAt(i) != '-' && temp2.charAt(i) != '>'){    
                         fd_visited[temp2.charAt(i)-'a']++;
                         if(fd_visited[temp2.charAt(i)-'a'] > 1){
+                            
+                            //inp_jtxtfld.setText("");
+                            Decomp.dec = "";
+                            Decomp.C_KEY = "";
+                            //total_jtxtfld.setText("");
+                            ckeylbl.setForeground(new Color(51,51,51));
+                            nflbl.setForeground(new Color(51,51,51));
+                            declbl.setForeground(new Color(51,51,51));
+                            ansarea.setBackground(new Color(51,51,51));
+                            ansarea.setText("");
+                            outckey.setText("");
+                            ansarea.setText("");
+                            //ansarea.setVisible(false);
+                            outnf.setText("");
                             JOptionPane.showMessageDialog(rootPane, "Remove attribute redundancy in Functional Dependencies");
-                            inp_jtxtfld.setText("");
                             return;
                         }
                     }
@@ -316,15 +341,29 @@ public class Input extends javax.swing.JFrame {
                     String temp = two.nextToken();  
                     for(int i=0;i<temp.length();i++){
                         if(visited_att[temp.charAt(i)-'a'] == 0){
-                           JOptionPane.showMessageDialog(rootPane, "Unidentified attribute found in a FD");
-                           inp_jtxtfld.setText("");
+                           
+                           //inp_jtxtfld.setText("");
+                            //inp_jtxtfld.setText("");
+                            Decomp.dec = "";
+                            Decomp.C_KEY = "";
+                            //total_jtxtfld.setText("");
+                            ckeylbl.setForeground(new Color(51,51,51));
+                            nflbl.setForeground(new Color(51,51,51));
+                            declbl.setForeground(new Color(51,51,51));
+                            ansarea.setBackground(new Color(51,51,51));
+                            ansarea.setText("");
+                            outckey.setText("");
+                            ansarea.setText("");
+                            //ansarea.setVisible(false);
+                            outnf.setText("");
+                            JOptionPane.showMessageDialog(rootPane, "Unidentified attribute found in a FD");
                            return;
                         }
                         
                     }
                 }
             }
-            inp_jtxtfld.setText("");
+            //inp_jtxtfld.setText("");
             Decomp.attributes = total;
             Decomp.fd = inp;
 
