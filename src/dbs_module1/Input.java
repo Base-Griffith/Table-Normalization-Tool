@@ -287,6 +287,7 @@ public class Input extends javax.swing.JFrame {
 
     private void run_jbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_run_jbtnActionPerformed
         // TODO add your handling code here:
+        try{
         if(total_jtxtfld.getText().equals("")){
             JOptionPane.showMessageDialog(rootPane,"ERROR! Provide adequate input");
             Decomp.dec = "";
@@ -304,6 +305,9 @@ public class Input extends javax.swing.JFrame {
         }
         else if(inp_jtxtfld.getText().equals("") && total_jtxtfld.getText().equals("") == false){
             outckey.setText("["+ total_jtxtfld.getText()+"]");
+            ckeylbl.setForeground(new Color(255,255,255));
+                            nflbl.setForeground(new Color(255,255,255));
+                            declbl.setForeground(new Color(255,255,255));
             outnf.setText("BCNF");
             ansarea.setText("Already in Highest Normal Form");
         }
@@ -397,6 +401,9 @@ public class Input extends javax.swing.JFrame {
             outckey.setText(Decomp.C_KEY);
            // System.out.println(Decomp.dec);
             ansarea.setText(Decomp.dec);
+        }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(rootPane, "Incorrect Inputs");
         }
         
         
